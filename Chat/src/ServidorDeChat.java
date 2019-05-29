@@ -6,6 +6,8 @@ import java.net.ServerSocket;
 import java.net.Socket;
 import java.util.Enumeration;
 import java.util.Vector;
+
+//commit d github  
 public class ServidorDeChat extends Thread {
 
     public static void main (String args[]) {
@@ -23,15 +25,15 @@ public class ServidorDeChat extends Thread {
                 
                 Thread t = new ServidorDeChat(conexao);
                 t.start();
-// voltando ao loop, esperando mais alguÈm se conectar.
+// voltando ao loop, esperando mais algu√©m se conectar.
             }
         } catch (IOException e) {
             
             System.out.println("IOException: " + e);
         }
     }
-    // Parte que controla as conexıes por meio de threads.
-    // Note que a instanciaÁ„o est· no main.
+    // Parte que controla as conex√µes por meio de threads.
+    // Note que a instancia√ß√£o est√° no main.
     private static Vector clientes;
     // socket deste cliente
     private Socket conexao;
@@ -75,7 +77,7 @@ public class ServidorDeChat extends Thread {
             System.out.println("IOException: " + e);
         }
     }
-    // enviar uma mensagem para todos, menos para o prÛprio
+    // enviar uma mensagem para todos, menos para o pr√≥prio
 
     public void sendToAll(PrintStream saida, String acao,String linha) throws IOException {
         Enumeration e = clientes.elements();
